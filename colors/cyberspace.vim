@@ -103,7 +103,7 @@ call s:hi('CyberSpaceUnderlined', s:cs.bgnone, s:cs.pink0, 'underline')
 
 call s:hi('CyberSpaceVirtual', s:cs.palegreen0, s:cs.pink0, 'none')
 
-call s:hi('CyberSpaceSpellBad', s:cs.bgnone, s:cs.red0, 'underline')
+call s:hi('CyberSpaceSpellBad', s:cs.bgnone, s:cs.fgnone, 'undercurl')
 
 """ Todo
 call s:hi('CyberSpaceTodo', s:cs.pink0, s:cs.black0, 'bold')
@@ -144,7 +144,7 @@ call s:hi('CyberSpaceModeMsg', s:cs.bgnone, s:cs.fgnone, 'none')
 call s:hi('CyberSpaceSpecialKey', s:cs.bgnone, s:cs.darkgray0, 'none')
 
 """ Pmenu
-call s:hi('CyberSpacePmenu', s:cs.lightgreen0, s:cs.black0, 'none')
+call s:hi('CyberSpacePmenu', s:cs.deeppurple0, s:cs.black0, 'none')
 call s:hi('CyberSpacePmenuSel', s:cs.black0, s:cs.cyan0, 'none')
 
 """ Cursor
