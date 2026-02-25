@@ -99,11 +99,11 @@ call s:hi('CyberSpaceType', s:cs.bgnone, s:cs.palegreen0, 'none')
 
 call s:hi('CyberSpaceSpecial', s:cs.bgnone, s:cs.violet0, 'none')
 
-call s:hi('CyberSpaceUnderlined', s:cs.bgnone, s:cs.pink0, 'none')
+call s:hi('CyberSpaceUnderlined', s:cs.bgnone, s:cs.pink0, 'underline')
 
 call s:hi('CyberSpaceVirtual', s:cs.palegreen0, s:cs.pink0, 'none')
 
-call s:hi('CyberSpaceSpellBad', s:cs.pink0, s:cs.fgnone, 'none')
+call s:hi('CyberSpaceSpellBad', s:cs.fgnone, s:cs.red0, 'underline')
 
 """ Todo
 call s:hi('CyberSpaceTodo', s:cs.pink0, s:cs.black0, 'bold')
