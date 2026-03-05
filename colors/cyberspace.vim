@@ -261,6 +261,7 @@ hi! link Ignore         CyberSpaceIgnore
 hi! link ModeMsg        CyberSpaceModeMsg
 hi! link SpecialKey     CyberSpaceSpecialKey
 hi! link vimCmplxRepeat Normal
+hi! link Directory      CyberSpaceFgCyan
 
 """ Cursor
 hi! clear CursorLine
