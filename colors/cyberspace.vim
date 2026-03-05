@@ -55,6 +55,8 @@ let s:cs.cyan0          = ['#00ffff', 14]
 let s:cs.yellow0        = ['#dac70f', 185]
 
 " Header backgrounds (dark muted versions of fg colors, blended toward #001111)
+let s:cs.codebg       = ['#001828', 'none']
+let s:cs.codeinlinebg = ['#001e2a', 'none']
 let s:cs.h1bg = ['#002233', 'none']
 let s:cs.h2bg = ['#002219', 'none']
 let s:cs.h3bg = ['#1c1228', 'none']
@@ -333,6 +335,10 @@ call s:hi('RenderMarkdownH3Bg', s:cs.h3bg, s:cs.fgnone,      'none')
 call s:hi('RenderMarkdownH4Bg', s:cs.h4bg, s:cs.fgnone,      'none')
 call s:hi('RenderMarkdownH5Bg', s:cs.h5bg, s:cs.fgnone,      'none')
 call s:hi('RenderMarkdownH6Bg', s:cs.h6bg, s:cs.fgnone,      'none')
+
+""" render-markdown.nvim code blocks
+call s:hi('RenderMarkdownCode',       s:cs.codebg,       s:cs.fgnone, 'none')
+call s:hi('RenderMarkdownCodeInline', s:cs.codeinlinebg, s:cs.fgnone, 'none')
 
 """ render-markdown.nvim tables
 call s:hi('RenderMarkdownTableHead', s:cs.bgnone, s:cs.blue0, 'bold')
