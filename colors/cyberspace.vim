@@ -323,13 +323,13 @@ call s:hi('SnacksPickerDir',       s:cs.bgnone, s:cs.deepbluegreen0, 'none')
 
 """ render-markdown.nvim headings
 " H1 = cyan, H2 = lightgreen, H3 = violet, H4 = blue, H5 = yellow, H6 = pink
-" Treesitter groups color the actual heading text content
-call s:hi('@markup.heading.1.markdown', s:cs.h1bg, s:cs.cyan0,       'bold')
-call s:hi('@markup.heading.2.markdown', s:cs.h2bg, s:cs.lightgreen0, 'bold')
-call s:hi('@markup.heading.3.markdown', s:cs.h3bg, s:cs.violet0,     'bold')
-call s:hi('@markup.heading.4.markdown', s:cs.h4bg, s:cs.blue0,       'bold')
-call s:hi('@markup.heading.5.markdown', s:cs.h5bg, s:cs.yellow0,     'bold')
-call s:hi('@markup.heading.6.markdown', s:cs.h6bg, s:cs.pink0,       'bold')
+" Treesitter groups color the actual heading text content (fg only — bg handled by RenderMarkdownH*Bg)
+execute 'hi @markup.heading.1.markdown guifg=' . s:cs.cyan0[0]       . ' ctermfg=' . s:cs.cyan0[1]       . ' gui=bold cterm=bold'
+execute 'hi @markup.heading.2.markdown guifg=' . s:cs.lightgreen0[0] . ' ctermfg=' . s:cs.lightgreen0[1] . ' gui=bold cterm=bold'
+execute 'hi @markup.heading.3.markdown guifg=' . s:cs.violet0[0]     . ' ctermfg=' . s:cs.violet0[1]     . ' gui=bold cterm=bold'
+execute 'hi @markup.heading.4.markdown guifg=' . s:cs.blue0[0]       . ' ctermfg=' . s:cs.blue0[1]       . ' gui=bold cterm=bold'
+execute 'hi @markup.heading.5.markdown guifg=' . s:cs.yellow0[0]     . ' ctermfg=' . s:cs.yellow0[1]     . ' gui=bold cterm=bold'
+execute 'hi @markup.heading.6.markdown guifg=' . s:cs.pink0[0]       . ' ctermfg=' . s:cs.pink0[1]       . ' gui=bold cterm=bold'
 " render-markdown groups color the heading icon/sign
 call s:hi('RenderMarkdownH1',   s:cs.h1bg, s:cs.cyan0,       'bold')
 call s:hi('RenderMarkdownH2',   s:cs.h2bg, s:cs.lightgreen0, 'bold')
@@ -345,8 +345,9 @@ call s:hi('RenderMarkdownH5Bg', s:cs.h5bg, s:cs.fgnone,      'none')
 call s:hi('RenderMarkdownH6Bg', s:cs.h6bg, s:cs.fgnone,      'none')
 
 """ render-markdown.nvim code blocks
-call s:hi('RenderMarkdownCode',       s:cs.codebg,       s:cs.fgnone, 'none')
-call s:hi('RenderMarkdownCodeInline', s:cs.codeinlinebg, s:cs.fgnone, 'none')
+" bg only — no fg so treesitter syntax colors inside code blocks are preserved
+execute 'hi RenderMarkdownCode       guibg=' . s:cs.codebg[0]       . ' ctermbg=' . s:cs.codebg[1]
+execute 'hi RenderMarkdownCodeInline guibg=' . s:cs.codeinlinebg[0] . ' ctermbg=' . s:cs.codeinlinebg[1]
 
 """ render-markdown.nvim tables
 call s:hi('RenderMarkdownTableHead', s:cs.bgnone, s:cs.blue0, 'bold')
