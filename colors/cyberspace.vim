@@ -275,7 +275,6 @@ hi! link vimCmplxRepeat Normal
 hi! link Directory            CyberSpaceFgCyan
 hi! link NeoTreeDirectoryName   CyberSpaceFgCyan
 hi! link NeoTreeDirectoryIcon   CyberSpaceFgCyan
-hi! link SnacksPickerDirectory  CyberSpaceFgCyan
 
 """ Cursor
 hi! clear CursorLine
@@ -313,6 +312,12 @@ call s:hi('CyberSpaceFgDeepBlueGreen', s:cs.bgnone, s:cs.deepbluegreen0, 'none')
 call s:hi('CyberSpaceFgPaleGreen', s:cs.bgnone, s:cs.palegreen0, 'none')
 call s:hi('CyberSpaceFgVermilion', s:cs.bgnone, s:cs.vermilion0, 'none')
 call s:hi('CyberSpaceFgPink', s:cs.bgnone, s:cs.pink0, 'none')
+
+""" Snacks picker
+" SnacksPickerDirectory: directory entries (item.dir=true)
+" SnacksPickerDir: the dirname prefix of file paths (e.g. lua/plugins/ in lua/plugins/foo.lua)
+call s:hi('SnacksPickerDirectory', s:cs.bgnone, s:cs.cyan0,        'none')
+call s:hi('SnacksPickerDir',       s:cs.bgnone, s:cs.deepbluegreen0, 'none')
 
 """ render-markdown.nvim headings
 " H1 = cyan, H2 = lightgreen, H3 = violet, H4 = blue, H5 = yellow, H6 = pink
