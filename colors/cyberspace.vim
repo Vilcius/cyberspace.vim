@@ -323,6 +323,14 @@ call s:hi('SnacksPickerDir',       s:cs.bgnone, s:cs.deepbluegreen0, 'none')
 
 """ render-markdown.nvim headings
 " H1 = cyan, H2 = lightgreen, H3 = violet, H4 = blue, H5 = yellow, H6 = pink
+" Treesitter groups color the actual heading text content
+call s:hi('@markup.heading.1.markdown', s:cs.h1bg, s:cs.cyan0,       'bold')
+call s:hi('@markup.heading.2.markdown', s:cs.h2bg, s:cs.lightgreen0, 'bold')
+call s:hi('@markup.heading.3.markdown', s:cs.h3bg, s:cs.violet0,     'bold')
+call s:hi('@markup.heading.4.markdown', s:cs.h4bg, s:cs.blue0,       'bold')
+call s:hi('@markup.heading.5.markdown', s:cs.h5bg, s:cs.yellow0,     'bold')
+call s:hi('@markup.heading.6.markdown', s:cs.h6bg, s:cs.pink0,       'bold')
+" render-markdown groups color the heading icon/sign
 call s:hi('RenderMarkdownH1',   s:cs.h1bg, s:cs.cyan0,       'bold')
 call s:hi('RenderMarkdownH2',   s:cs.h2bg, s:cs.lightgreen0, 'bold')
 call s:hi('RenderMarkdownH3',   s:cs.h3bg, s:cs.violet0,     'bold')
