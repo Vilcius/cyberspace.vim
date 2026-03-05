@@ -337,12 +337,12 @@ call s:hi('RenderMarkdownH3',   s:cs.h3bg, s:cs.violet0,     'bold')
 call s:hi('RenderMarkdownH4',   s:cs.h4bg, s:cs.blue0,       'bold')
 call s:hi('RenderMarkdownH5',   s:cs.h5bg, s:cs.yellow0,     'bold')
 call s:hi('RenderMarkdownH6',   s:cs.h6bg, s:cs.pink0,       'bold')
-call s:hi('RenderMarkdownH1Bg', s:cs.h1bg, s:cs.fgnone,      'none')
-call s:hi('RenderMarkdownH2Bg', s:cs.h2bg, s:cs.fgnone,      'none')
-call s:hi('RenderMarkdownH3Bg', s:cs.h3bg, s:cs.fgnone,      'none')
-call s:hi('RenderMarkdownH4Bg', s:cs.h4bg, s:cs.fgnone,      'none')
-call s:hi('RenderMarkdownH5Bg', s:cs.h5bg, s:cs.fgnone,      'none')
-call s:hi('RenderMarkdownH6Bg', s:cs.h6bg, s:cs.fgnone,      'none')
+call s:hi('RenderMarkdownH1Bg', s:cs.h1bg, s:cs.cyan0,       'bold')
+call s:hi('RenderMarkdownH2Bg', s:cs.h2bg, s:cs.lightgreen0, 'bold')
+call s:hi('RenderMarkdownH3Bg', s:cs.h3bg, s:cs.violet0,     'bold')
+call s:hi('RenderMarkdownH4Bg', s:cs.h4bg, s:cs.blue0,       'bold')
+call s:hi('RenderMarkdownH5Bg', s:cs.h5bg, s:cs.yellow0,     'bold')
+call s:hi('RenderMarkdownH6Bg', s:cs.h6bg, s:cs.pink0,       'bold')
 
 """ render-markdown.nvim code blocks
 " bg only — no fg so treesitter syntax colors inside code blocks are preserved
