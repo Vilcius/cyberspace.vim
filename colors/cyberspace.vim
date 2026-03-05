@@ -54,6 +54,14 @@ let s:cs.cyan0          = ['#00ffff', 14]
 " yellow
 let s:cs.yellow0        = ['#dac70f', 185]
 
+" Header backgrounds (dark muted versions of fg colors, blended toward #001111)
+let s:cs.h1bg = ['#002233', 'none']
+let s:cs.h2bg = ['#002219', 'none']
+let s:cs.h3bg = ['#1c1228', 'none']
+let s:cs.h4bg = ['#001e33', 'none']
+let s:cs.h5bg = ['#1c1900', 'none']
+let s:cs.h6bg = ['#260026', 'none']
+
 function! s:hi(group, bg, fg, term)
   " Arguments: group, guifg, guibg, gui
 
@@ -261,7 +269,9 @@ hi! link Ignore         CyberSpaceIgnore
 hi! link ModeMsg        CyberSpaceModeMsg
 hi! link SpecialKey     CyberSpaceSpecialKey
 hi! link vimCmplxRepeat Normal
-hi! link Directory      CyberSpaceFgCyan
+hi! link Directory            CyberSpaceFgCyan
+hi! link NeoTreeDirectoryName CyberSpaceFgCyan
+hi! link NeoTreeDirectoryIcon CyberSpaceFgCyan
 
 """ Cursor
 hi! clear CursorLine
@@ -299,6 +309,21 @@ call s:hi('CyberSpaceFgDeepBlueGreen', s:cs.bgnone, s:cs.deepbluegreen0, 'none')
 call s:hi('CyberSpaceFgPaleGreen', s:cs.bgnone, s:cs.palegreen0, 'none')
 call s:hi('CyberSpaceFgVermilion', s:cs.bgnone, s:cs.vermilion0, 'none')
 call s:hi('CyberSpaceFgPink', s:cs.bgnone, s:cs.pink0, 'none')
+
+""" render-markdown.nvim headings
+" H1 = cyan, H2 = lightgreen, H3 = violet, H4 = blue, H5 = yellow, H6 = pink
+call s:hi('RenderMarkdownH1',   s:cs.h1bg, s:cs.cyan0,       'bold')
+call s:hi('RenderMarkdownH2',   s:cs.h2bg, s:cs.lightgreen0, 'bold')
+call s:hi('RenderMarkdownH3',   s:cs.h3bg, s:cs.violet0,     'bold')
+call s:hi('RenderMarkdownH4',   s:cs.h4bg, s:cs.blue0,       'bold')
+call s:hi('RenderMarkdownH5',   s:cs.h5bg, s:cs.yellow0,     'bold')
+call s:hi('RenderMarkdownH6',   s:cs.h6bg, s:cs.pink0,       'bold')
+call s:hi('RenderMarkdownH1Bg', s:cs.h1bg, s:cs.fgnone,      'none')
+call s:hi('RenderMarkdownH2Bg', s:cs.h2bg, s:cs.fgnone,      'none')
+call s:hi('RenderMarkdownH3Bg', s:cs.h3bg, s:cs.fgnone,      'none')
+call s:hi('RenderMarkdownH4Bg', s:cs.h4bg, s:cs.fgnone,      'none')
+call s:hi('RenderMarkdownH5Bg', s:cs.h5bg, s:cs.fgnone,      'none')
+call s:hi('RenderMarkdownH6Bg', s:cs.h6bg, s:cs.fgnone,      'none')
 
 
 """ Go {{{
