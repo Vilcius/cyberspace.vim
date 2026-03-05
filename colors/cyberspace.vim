@@ -334,6 +334,10 @@ call s:hi('RenderMarkdownH4Bg', s:cs.h4bg, s:cs.fgnone,      'none')
 call s:hi('RenderMarkdownH5Bg', s:cs.h5bg, s:cs.fgnone,      'none')
 call s:hi('RenderMarkdownH6Bg', s:cs.h6bg, s:cs.fgnone,      'none')
 
+""" render-markdown.nvim tables
+call s:hi('RenderMarkdownTableHead', s:cs.bgnone, s:cs.blue0, 'bold')
+call s:hi('RenderMarkdownTableRow',  s:cs.bgnone, s:cs.blue0, 'none')
+call s:hi('RenderMarkdownTableFill', s:cs.bgnone, s:cs.blue0, 'none')
 
 """ Go {{{
 
