@@ -145,7 +145,8 @@ call s:hi('CyberSpaceLspInfoText', s:cs.yellow0, s:cs.black0, 'none')
 
 """ Other
 call s:hi('CyberSpaceFullSpace', s:cs.palegreen0, s:cs.white0, 'none')
-call s:hi('CyberSpaceVertSplit', s:cs.deepbluegreen0, s:cs.black0, 'none')
+call s:hi('CyberSpaceVertSplit', s:cs.bgnone, s:cs.violet0, 'none')
+call s:hi('CyberSpaceFloatBorder', s:cs.bgnone, s:cs.violet0, 'none')
 call s:hi('CyberSpaceNonText', s:cs.bgnone, s:cs.black0, 'none')
 call s:hi('CyberSpaceIgnore', s:cs.bgnone, s:cs.fgnone, 'none')
 call s:hi('CyberSpaceModeMsg', s:cs.bgnone, s:cs.fgnone, 'none')
@@ -264,14 +265,17 @@ hi! link WarningMsg Warning
 """ Other
 hi! link FullSpace      CyberSpaceFullSpace
 hi! link VertSplit      CyberSpaceVertSplit
+hi! link WinSeparator   CyberSpaceVertSplit
+hi! link FloatBorder    CyberSpaceFloatBorder
 hi! link NonText        CyberSpaceNonText
 hi! link Ignore         CyberSpaceIgnore
 hi! link ModeMsg        CyberSpaceModeMsg
 hi! link SpecialKey     CyberSpaceSpecialKey
 hi! link vimCmplxRepeat Normal
 hi! link Directory            CyberSpaceFgCyan
-hi! link NeoTreeDirectoryName CyberSpaceFgCyan
-hi! link NeoTreeDirectoryIcon CyberSpaceFgCyan
+hi! link NeoTreeDirectoryName   CyberSpaceFgCyan
+hi! link NeoTreeDirectoryIcon   CyberSpaceFgCyan
+hi! link SnacksPickerDirectory  CyberSpaceFgCyan
 
 """ Cursor
 hi! clear CursorLine
